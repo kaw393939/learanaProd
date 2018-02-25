@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\eventAtendee;
+use App\eventAttendee;
 use Illuminate\Http\Request;
 
 class EventAtendeeController extends Controller
@@ -41,10 +41,10 @@ class EventAtendeeController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\eventAtendee  $eventAtendee
+     * @param  \App\eventAttendee  $eventAtendee
      * @return \Illuminate\Http\Response
      */
-    public function show(eventAtendee $eventAtendee)
+    public function show(eventAttendee $eventAtendee)
     {
         //
     }
@@ -52,10 +52,10 @@ class EventAtendeeController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\eventAtendee  $eventAtendee
+     * @param  \App\eventAttendee  $eventAtendee
      * @return \Illuminate\Http\Response
      */
-    public function edit(eventAtendee $eventAtendee)
+    public function edit(eventAttendee $eventAtendee)
     {
         //
     }
@@ -64,10 +64,10 @@ class EventAtendeeController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\eventAtendee  $eventAtendee
+     * @param  \App\eventAttendee  $eventAtendee
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, eventAtendee $eventAtendee)
+    public function update(Request $request, eventAttendee $eventAtendee)
     {
         //
     }
@@ -75,10 +75,10 @@ class EventAtendeeController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\eventAtendee  $eventAtendee
+     * @param  \App\eventAttendee  $eventAtendee
      * @return \Illuminate\Http\Response
      */
-    public function destroy(eventAtendee $eventAtendee)
+    public function destroy(eventAttendee $eventAtendee)
     {
         //
     }

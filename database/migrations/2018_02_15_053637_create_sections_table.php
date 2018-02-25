@@ -28,6 +28,8 @@ class CreateSectionsTable extends Migration
             $table->string('status');
             $table->boolean('publish')->default(false);
             $table->timestamps();
+            $table->softDeletes();
+
         });
     }
 

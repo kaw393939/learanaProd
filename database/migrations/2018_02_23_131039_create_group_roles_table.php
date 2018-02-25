@@ -14,9 +14,11 @@ class CreateGroupRolesTable extends Migration
     public function up()
     {
         Schema::create('group_roles', function (Blueprint $table) {
-            $table->integer('id');
-            $table->string('name');
+            $table->integer('id')->increments()->primary();
+            $table->string('type');
             $table->timestamps();
+            $table->softDeletes();
+
         });
     }
 

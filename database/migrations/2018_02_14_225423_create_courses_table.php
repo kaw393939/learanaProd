@@ -19,9 +19,10 @@ class CreateCoursesTable extends Migration
             //rest of fields then...
             $table->foreign('user_id')->references('id')->on('users');
             $table->string('title');
-            $table->string('description');
+            $table->longText('description');
             $table->boolean('publish')->default(false);
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

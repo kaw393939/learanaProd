@@ -3,16 +3,18 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Cviebrock\EloquentTaggable\Taggable;
 
 class Course extends Model
 {
     //
+    use Taggable;
 
     public function getTitle() {
         return $this->title;
     }
 
-    public function user()
+    public function owner()
     {
         return $this->belongsTo('App\User');
     }

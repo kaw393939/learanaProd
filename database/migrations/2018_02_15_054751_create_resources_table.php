@@ -19,9 +19,13 @@ class CreateResourcesTable extends Migration
             //rest of fields then...
             $table->foreign('user_id')->references('id')->on('users');
             $table->string('title');
-            $table->string('url')->default('none');
+            $table->longText('description');
+            $table->string('uri')->default('none');
             $table->boolean('publish')->default(false);
+            $table->time('length');
             $table->timestamps();
+            $table->softDeletes();
+
         });
     }
 

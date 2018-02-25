@@ -20,9 +20,11 @@ class CreateGroupsTable extends Migration
             $table->integer('type_id')->unsigned();
             //rest of fields then...
             $table->foreign('type_id')->references('id')->on('group_types');
-            $table->string('title');
+            $table->longText('title');
             $table->string('description')->nullable();
+            $table->string('integrationService');
             $table->boolean('publish')->default(false);
+            $table->softDeletes();
 
 
             $table->timestamps();

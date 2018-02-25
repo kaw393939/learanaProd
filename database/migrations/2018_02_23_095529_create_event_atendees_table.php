@@ -25,6 +25,8 @@ class CreateEventAtendeesTable extends Migration
             //rest of fields then...
             $table->foreign('eventRole_id')->references('id')->on('event_roles');
             $table->timestamps();
+            $table->softDeletes();
+
         });
     }
 

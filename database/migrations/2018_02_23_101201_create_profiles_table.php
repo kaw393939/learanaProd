@@ -14,13 +14,16 @@ class CreateProfilesTable extends Migration
     public function up()
     {
         Schema::create('profiles', function (Blueprint $table) {
-            $table->increments('id');
-            $table->integer('user_id')->unsigned();
+            $table->integer('user_id')->unsigned()->unique()->primary('id');
             //rest of fields then...
             $table->foreign('user_id')->references('id')->on('users');
             $table->string('title');
             $table->string('body')->nullable();
+            $table->string('fname')->nullable();
+            $table->string('lname')->nullable();
+            $table->date('birthday')->nullable();
             $table->timestamps();
+
         });
     }
 

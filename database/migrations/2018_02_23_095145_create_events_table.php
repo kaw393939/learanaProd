@@ -22,9 +22,20 @@ class CreateEventsTable extends Migration
             //rest of fields then...
             $table->foreign('type_id')->references('id')->on('event_types');
             $table->string('title');
-            $table->string('body')->nullable();
+            $table->longText('body')->nullable();
+            $table->string('address')->nullable();
+            $table->string('city')->nullable();
+            $table->string('state')->nullable();
+            $table->string('zip')->nullable();
+            $table->string('phone')->nullable();
+            $table->dateTimeTz('eventStart')->nullable($value = true);
+            $table->dateTimeTz('eventEnd')->nullable($value = true);
+            $table->dateTimeTz('registrationOpen')->nullable($value = true);
+            $table->dateTimeTz('registrationClose')->nullable($value = true);
             $table->boolean('publish')->default(false);
             $table->timestamps();
+            $table->softDeletes();
+
         });
     }
 

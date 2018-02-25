@@ -21,7 +21,12 @@ class CreateCourseEnrollmentsTable extends Migration
             $table->integer('course_id')->unsigned();
             //rest of fields then...
             $table->foreign('course_id')->references('id')->on('courses');
+            $table->integer('courseRole_id')->unsigned();
+            //rest of fields then...
+            $table->foreign('courseRole_id')->references('id')->on('course_roles');
             $table->timestamps();
+            $table->softDeletes();
+
         });
     }
 

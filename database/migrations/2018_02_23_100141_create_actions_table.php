@@ -17,10 +17,12 @@ class CreateActionsTable extends Migration
             $table->increments('id');
             $table->integer('user_id')->unsigned();
             $table->foreign('user_id')->references('id')->on('users');
-            $table->string('http_referer')->nullable();
+            $table->string('HTTP_REFERER')->nullable();
             $table->string('REQUEST_URI')->nullable();
             $table->string('HTTP_USER_AGENT')->nullable();
             $table->timestamps();
+            $table->softDeletes();
+
         });
     }
 

@@ -25,6 +25,8 @@ class CreateGroupMembersTable extends Migration
             //rest of fields then...
             $table->foreign('groupRole_id')->references('id')->on('group_roles');
             $table->timestamps();
+            $table->softDeletes();
+
         });
     }
 

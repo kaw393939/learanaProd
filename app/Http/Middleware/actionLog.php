@@ -13,22 +13,20 @@ class actionLog
     /**
      * Handle an incoming request.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \Closure  $next
+     * @param  \Illuminate\Http\Request $request
+     * @param  \Closure $next
      * @return mixed
      */
     public function handle($request, Closure $next)
     {
 
-        $action = new action();
+        $userID = 0;
 
-        if(is_null(Auth::id()))
-        {
-            $userID = 0;
-        } else {
-            $userID = Auth::id();
+        if(Auth::check()) { // first check if there is a logged in user
+
+          $userID = Auth::id();
         }
-
+        $action = new action();
         $action->user_id = $userID;
         $action->HTTP_USER_AGENT = $request->server('HTTP_USER_AGENT');
         $action->http_referer = $request->server('HTTP_REFERER');
