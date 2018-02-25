@@ -13,7 +13,7 @@ class CreateEventAtendeesTable extends Migration
      */
     public function up()
     {
-        Schema::create('event_atendees', function (Blueprint $table) {
+        Schema::create('event_attendees', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('user_id')->unsigned();
             //rest of fields then...
