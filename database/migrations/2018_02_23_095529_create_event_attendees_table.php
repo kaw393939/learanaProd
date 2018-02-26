@@ -4,7 +4,8 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateEventAtendeesTable extends Migration
+class CreateEventAttendeesTable extends Migration
+
 {
     /**
      * Run the migrations.
@@ -37,6 +38,6 @@ class CreateEventAtendeesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('event_atendees');
+        Schema::dropIfExists('event_attendees');
     }
 }
