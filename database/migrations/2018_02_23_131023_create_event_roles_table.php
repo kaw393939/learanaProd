@@ -17,8 +17,6 @@ class CreateEventRolesTable extends Migration
             $table->integer('id')->increments()->primary();
             $table->string('type');
             $table->timestamps();
-            $table->softDeletes();
-
         });
     }
 

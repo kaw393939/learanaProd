@@ -17,7 +17,6 @@ class CreateCourseTypesTable extends Migration
             $table->integer('id')->increments()->primary();
             $table->string('type');
             $table->timestamps();
-            $table->softDeletes();
 
         });
     }

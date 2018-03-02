@@ -28,8 +28,6 @@ class CreateEventsTable extends Migration
             $table->string('state')->nullable();
             $table->string('zip')->nullable();
             $table->string('phone')->nullable();
-            $table->dateTimeTz('eventStart')->nullable($value = true);
-            $table->dateTimeTz('eventEnd')->nullable($value = true);
             $table->dateTimeTz('registrationOpen')->nullable($value = true);
             $table->dateTimeTz('registrationClose')->nullable($value = true);
             $table->boolean('publish')->default(false);

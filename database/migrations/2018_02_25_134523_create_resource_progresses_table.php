@@ -15,10 +15,10 @@ class CreateResourceProgressesTable extends Migration
     {
         Schema::create('resource_progresses', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('resource_id')->unsigned();
-            $table->foreign('resource_id')->references('id')->on('users');
             $table->integer('user_id')->unsigned();
             $table->foreign('user_id')->references('id')->on('users');
+            $table->integer('resource_id')->unsigned();
+            $table->foreign('resource_id')->references('id')->on('resources');
             $table->decimal('percentComplete')->default(0);
             $table->timestamps();
         });

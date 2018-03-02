@@ -20,7 +20,6 @@ class CreateCourseResourcesTable extends Migration
             $table->integer('resource_id')->unsigned();
             $table->foreign('resource_id')->references('id')->on('resources');
             $table->timestamps();
-            $table->softDeletes();
 
         });
     }
