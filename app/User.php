@@ -14,7 +14,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password'    ];
+       'email', 'password'    ];
 
     /**
      * The attributes that should be hidden for arrays.
@@ -28,6 +28,10 @@ class User extends Authenticatable
     public function courses()
     {
         return $this->hasMany('App\Course','user_id','id');
+    }
+    public function profile() {
+
+        return $this->hasOne('App\profile','user_id', 'id');
     }
     public function enrollments($courseID = NULL)
     {
@@ -58,10 +62,7 @@ class User extends Authenticatable
     {
         return $this->hasMany('App\mediaEvent','user_id','id');
     }
-    public function profile() {
 
-        return $this->hasOne('App\profile','user_id', 'id');
-    }
     public function resources()
     {
         return $this->hasMany('App\Resource');

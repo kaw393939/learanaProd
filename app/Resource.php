@@ -14,6 +14,6 @@ class Resource extends Model
     }
     public function course()
     {
-        return $this->belongsTo('App\Course');
+        return $this->belongsToMany('App\Course','course_resources', 'course_id', 'resource_id');
     }
 }

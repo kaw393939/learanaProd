@@ -22,6 +22,7 @@ class CreateProfilesTable extends Migration
             $table->string('fname')->nullable();
             $table->string('lname')->nullable();
             $table->date('birthday')->nullable();
+            $table->boolean('public')->default(true);
             $table->timestamps();
 
         });
