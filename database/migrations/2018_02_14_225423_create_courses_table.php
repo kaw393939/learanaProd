@@ -18,6 +18,9 @@ class CreateCoursesTable extends Migration
             $table->integer('user_id')->unsigned();
             //rest of fields then...
             $table->foreign('user_id')->references('id')->on('users');
+            $table->integer('courseType_id')->unsigned();
+            //rest of fields then...
+            $table->foreign('courseType_id')->references('id')->on('course_types');
             $table->string('title');
             $table->longText('description');
             $table->boolean('publish')->default(false);

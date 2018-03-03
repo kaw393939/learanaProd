@@ -18,5 +18,6 @@ $factory->define(\App\Course::class, function (Faker $faker) {
         'title' => $faker->catchPhrase,
         'description' => $faker->paragraph($nbSentences = 3, $variableNbSentences = true),
         'publish' =>  $faker->randomElement($array = array (1,0)),
+        'courseType_id' => $faker->randomElement($array = array(1, 2, 3)),
     ];
 });

@@ -17,14 +17,13 @@ class CreateGroupsTable extends Migration
             $table->increments('id');
             $table->integer('user_id')->unsigned();
             $table->foreign('user_id')->references('id')->on('users');
-            $table->integer('type_id')->unsigned();
+            $table->integer('groupType_id')->unsigned();
             //rest of fields then...
-            $table->foreign('type_id')->references('id')->on('group_types');
-            $table->longText('title');
-            $table->string('description')->nullable();
+            $table->foreign('groupType_id')->references('id')->on('group_types');
+            $table->string('title');
+            $table->longText('description')->nullable();
             $table->string('integrationService');
-            $table->boolean('publish')->default(false);
-            $table->softDeletes();
+            $table->boolean('active')->default(true);
 
 
             $table->timestamps();

@@ -33,22 +33,34 @@ class User extends Authenticatable
 
         return $this->hasOne('App\profile','user_id', 'id');
     }
-    public function enrollments($courseID = NULL)
+
+    public function role()
     {
-        return $this->hasMany('App\courseEnrollment','user_id','id');
+
+        return $this->hasOne('App\systemRole', 'user_id', 'id');
     }
     public function groups()
     {
-        return $this->hasMany('App\Group','user_id','id');
+        return $this->hasMany('App\group', 'user_id', 'id');
     }
+
+    public function events()
+    {
+        return $this->hasMany('App\event', 'user_id', 'id');
+    }
+
+//not done
     public function groupMemberships($groupID = NULL)
     {
         return $this->hasMany('App\groupMembership','user_id','id');
     }
-    public function events()
+
+    public function enrollments($courseID = NULL)
     {
-        return $this->hasMany('App\Event','user_id','id');
+        return $this->hasMany('App\courseEnrollment', 'user_id', 'id');
     }
+
+
     public function eventAttendance($eventID = NULL)
     {
         return $this->hasMany('App\groupMembership','user_id','id');

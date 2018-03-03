@@ -18,11 +18,11 @@ class CreateEventsTable extends Migration
             $table->integer('user_id')->unsigned();
             //rest of fields then...
             $table->foreign('user_id')->references('id')->on('users');
-            $table->integer('type_id')->unsigned();
+            $table->integer('eventType_id')->unsigned();
             //rest of fields then...
-            $table->foreign('type_id')->references('id')->on('event_types');
+            $table->foreign('eventType_id')->references('id')->on('event_types');
             $table->string('title');
-            $table->longText('body')->nullable();
+            $table->longText('description')->nullable();
             $table->string('address')->nullable();
             $table->string('city')->nullable();
             $table->string('state')->nullable();
@@ -32,7 +32,6 @@ class CreateEventsTable extends Migration
             $table->dateTimeTz('registrationClose')->nullable($value = true);
             $table->boolean('publish')->default(false);
             $table->timestamps();
-            $table->softDeletes();
 
         });
     }

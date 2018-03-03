@@ -14,10 +14,8 @@ class CreateSystemRolesTable extends Migration
     public function up()
     {
         Schema::create('system_roles', function (Blueprint $table) {
-            $table->integer('id')->increments()->primary();
+            $table->integer('id')->integer()->primary();
             $table->string('type');
-            $table->timestamps();
-
         });
     }
 
