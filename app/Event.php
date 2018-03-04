@@ -3,10 +3,8 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
-use Cviebrock\EloquentTaggable\Taggable;
 class event extends Model
 {
-    use Taggable;
 
     public function owner()
     {
@@ -14,6 +12,6 @@ class event extends Model
     }
     public function attendees()
     {
-        return $this->belongsToMany('App\eventAttendee', 'event_attendees', 'user_id', 'event_id')->withTimestamps();
+        return $this->morphToMany(event::class, 'entity', 'members', 'entity_id', 'user_id')->withTimestamps();
     }
 }

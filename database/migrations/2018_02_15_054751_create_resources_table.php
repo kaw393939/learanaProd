@@ -15,12 +15,10 @@ class CreateResourcesTable extends Migration
     {
         Schema::create('resources', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('user_id')->unsigned();
-            //rest of fields then...
-            $table->foreign('user_id')->references('id')->on('users');
             $table->string('title');
             $table->longText('description');
             $table->string('uri')->default('none');
+            $table->string('type')->default('none');
             $table->time('durration');
             $table->boolean('publish')->default(false);
             $table->timestamps();

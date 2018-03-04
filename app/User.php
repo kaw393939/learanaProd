@@ -25,11 +25,6 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
-    public function courses()
-    {
-        return $this->hasMany('App\Course', 'user_id', 'id');
-    }
-
     public function profile()
     {
 
@@ -44,46 +39,21 @@ class User extends Authenticatable
 
     public function groups()
     {
-        return $this->hasMany('App\group', 'user_id', 'id');
+        return $this->morphedByMany(Group::class, 'entity', 'members', 'user_id', 'entity_id')->withTimestamps();
     }
 
     public function events()
     {
-        return $this->hasMany('App\event', 'user_id', 'id');
+        return $this->morphedByMany(Event::class, 'entity', 'members', 'user_id', 'entity_id')->withTimestamps();
+    }
+
+    public function courses()
+    {
+        return $this->morphedByMany(Course::class, 'entity', 'members', 'user_id', 'entity_id')->withTimestamps();
     }
 
     public function resources()
     {
-        return $this->hasMany('App\Resource', 'user_id', 'id');
-    }
-
-    public function enrollments()
-    {
-        return $this->belongsToMany('App\courseEnrollment', 'course_enrollments', 'user_id', 'course_id')->withPivot('courseRole_id')->withTimestamps();
-    }
-    public function eventAttendance()
-    {
-        return $this->belongsToMany('App\eventAttendee', 'event_attendees', 'user_id', 'event_id')->withPivot('eventRole_id')->withTimestamps();
-    }
-    public function groupMemberships($groupID = NULL)
-    {
-        return $this->belongsToMany('App\groupMember', 'group_members', 'user_id', 'group_id')->withPivot('groupRole_id')->withTimestamps();
-    }
-
-
-
-    public function actions()
-    {
-        return $this->hasMany('App\Action', 'user_id', 'id');
-    }
-
-    public function mediaEvents()
-    {
-        return $this->hasMany('App\mediaEvent', 'user_id', 'id');
-    }
-
-    public function sections()
-    {
-        return $this->hasMany('App\Section');
+        return $this->morphedByMany(Resource::class, 'entity', 'members', 'user_id', 'entity_id')->withTimestamps();
     }
 }

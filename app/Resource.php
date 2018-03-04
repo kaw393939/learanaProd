@@ -6,14 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 use Cviebrock\EloquentTaggable\Taggable;
 class Resource extends Model
 {
-    use Taggable;
-
-    public function user()
+    public function users()
     {
-        return $this->belongsTo('App\User');
-    }
-    public function course()
-    {
-        return $this->belongsToMany('App\Course','course_resources', 'course_id', 'resource_id');
+        return $this->morphToMany(Resource::class, 'entity', 'members', 'entity_id', 'user_id')->withTimestamps();
     }
 }

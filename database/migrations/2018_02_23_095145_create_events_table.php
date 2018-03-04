@@ -15,19 +15,11 @@ class CreateEventsTable extends Migration
     {
         Schema::create('events', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('user_id')->unsigned();
-            //rest of fields then...
-            $table->foreign('user_id')->references('id')->on('users');
+            $table->string('title');
+            $table->longText('description')->nullable();
             $table->integer('eventType_id')->unsigned();
             //rest of fields then...
             $table->foreign('eventType_id')->references('id')->on('event_types');
-            $table->string('title');
-            $table->longText('description')->nullable();
-            $table->string('address')->nullable();
-            $table->string('city')->nullable();
-            $table->string('state')->nullable();
-            $table->string('zip')->nullable();
-            $table->string('phone')->nullable();
             $table->dateTimeTz('registrationOpen')->nullable($value = true);
             $table->dateTimeTz('registrationClose')->nullable($value = true);
             $table->boolean('publish')->default(false);

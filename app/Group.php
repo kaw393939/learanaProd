@@ -12,7 +12,7 @@ class group extends Model
     }
     public function members()
     {
-        return $this->belongsToMany('App\groupMember', 'group_members', 'user_id', 'group_id')->withTimestamps();
+        return $this->morphToMany(group::class, 'entity', 'members', 'entity_id', 'user_id')->withTimestamps();
     }
     public function groupType()
     {

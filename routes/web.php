@@ -12,15 +12,13 @@
 */
 
 Auth::routes();
-Route::get('/', 'CourseController@index')->name('guest');
+Route::get('/', 'CourseController@UserCourses')->name('guest');
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/course/index', 'CourseController@index')->name('course.index');
 Route::get('/resource/index', 'ResourceController@index')->name('resource.index');
 Route::get('/user/index', 'UserController@index')->name('user.index');
 Route::get('/section/index', 'SectionController@index')->name('section.index');
-
-
 
 //Resource Controllers to create new
 Route::get('/course/new', 'CourseController@create')->name('course.create');

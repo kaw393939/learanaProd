@@ -31,6 +31,21 @@ class CourseController extends Controller
         return view('courses.index')->with(compact('records','pageTitle'));
     }
 
+    public function UserCourses($userID = NULL)
+    {
+        //
+        if ($userID == NULL) {
+            $userID = Auth::user()->id;
+        }
+        $records = Course::where('user_id', $userID)->get()->toArray();
+
+        $pageTitle = 'My Courses';
+
+        $records = data2Table($records);
+
+        return view('courses.index')->with(compact('records', 'pageTitle'));
+    }
+
     /**
      * Show the form for creating a new resource.
      *

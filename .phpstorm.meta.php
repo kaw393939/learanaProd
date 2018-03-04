@@ -3,7 +3,7 @@ namespace PHPSTORM_META {
 
    /**
     * PhpStorm Meta file, to provide autocomplete information for PhpStorm
-    * Generated on 2018-03-04 01:00:09.
+    * Generated on 2018-03-04 19:38:48.
     *
     * @author Barry vd. Heuvel <barryvdh@gmail.com>
     * @see https://github.com/barryvdh/laravel-ide-helper
@@ -47,7 +47,6 @@ namespace PHPSTORM_META {
         'modules' => \Nwidart\Modules\Laravel\Repository::class,
         'Nwidart\Modules\Contracts\RepositoryInterface' => \Nwidart\Modules\Laravel\Repository::class,
         'image' => \Intervention\Image\ImageManager::class,
-        'Cviebrock\EloquentTaggable\Services\TagService' => \Cviebrock\EloquentTaggable\Services\TagService::class,
         'avatar' => \Laravolt\Avatar\Avatar::class,
         'avatar.generator' => \Laravolt\Avatar\Generator\DefaultGenerator::class,
         'blade.compiler' => \Illuminate\View\Compilers\BladeCompiler::class,
@@ -189,7 +188,6 @@ namespace PHPSTORM_META {
         'modules' => \Nwidart\Modules\Laravel\Repository::class,
         'Nwidart\Modules\Contracts\RepositoryInterface' => \Nwidart\Modules\Laravel\Repository::class,
         'image' => \Intervention\Image\ImageManager::class,
-        'Cviebrock\EloquentTaggable\Services\TagService' => \Cviebrock\EloquentTaggable\Services\TagService::class,
         'avatar' => \Laravolt\Avatar\Avatar::class,
         'avatar.generator' => \Laravolt\Avatar\Generator\DefaultGenerator::class,
         'blade.compiler' => \Illuminate\View\Compilers\BladeCompiler::class,
@@ -331,7 +329,6 @@ namespace PHPSTORM_META {
         'modules' => \Nwidart\Modules\Laravel\Repository::class,
         'Nwidart\Modules\Contracts\RepositoryInterface' => \Nwidart\Modules\Laravel\Repository::class,
         'image' => \Intervention\Image\ImageManager::class,
-        'Cviebrock\EloquentTaggable\Services\TagService' => \Cviebrock\EloquentTaggable\Services\TagService::class,
         'avatar' => \Laravolt\Avatar\Avatar::class,
         'avatar.generator' => \Laravolt\Avatar\Generator\DefaultGenerator::class,
         'blade.compiler' => \Illuminate\View\Compilers\BladeCompiler::class,
@@ -473,7 +470,6 @@ namespace PHPSTORM_META {
         'modules' => \Nwidart\Modules\Laravel\Repository::class,
         'Nwidart\Modules\Contracts\RepositoryInterface' => \Nwidart\Modules\Laravel\Repository::class,
         'image' => \Intervention\Image\ImageManager::class,
-        'Cviebrock\EloquentTaggable\Services\TagService' => \Cviebrock\EloquentTaggable\Services\TagService::class,
         'avatar' => \Laravolt\Avatar\Avatar::class,
         'avatar.generator' => \Laravolt\Avatar\Generator\DefaultGenerator::class,
         'blade.compiler' => \Illuminate\View\Compilers\BladeCompiler::class,
@@ -615,7 +611,6 @@ namespace PHPSTORM_META {
         'modules' => \Nwidart\Modules\Laravel\Repository::class,
         'Nwidart\Modules\Contracts\RepositoryInterface' => \Nwidart\Modules\Laravel\Repository::class,
         'image' => \Intervention\Image\ImageManager::class,
-        'Cviebrock\EloquentTaggable\Services\TagService' => \Cviebrock\EloquentTaggable\Services\TagService::class,
         'avatar' => \Laravolt\Avatar\Avatar::class,
         'avatar.generator' => \Laravolt\Avatar\Generator\DefaultGenerator::class,
         'blade.compiler' => \Illuminate\View\Compilers\BladeCompiler::class,
@@ -757,7 +752,6 @@ namespace PHPSTORM_META {
         'modules' => \Nwidart\Modules\Laravel\Repository::class,
         'Nwidart\Modules\Contracts\RepositoryInterface' => \Nwidart\Modules\Laravel\Repository::class,
         'image' => \Intervention\Image\ImageManager::class,
-        'Cviebrock\EloquentTaggable\Services\TagService' => \Cviebrock\EloquentTaggable\Services\TagService::class,
         'avatar' => \Laravolt\Avatar\Avatar::class,
         'avatar.generator' => \Laravolt\Avatar\Generator\DefaultGenerator::class,
         'blade.compiler' => \Illuminate\View\Compilers\BladeCompiler::class,
@@ -899,7 +893,6 @@ namespace PHPSTORM_META {
         'modules' => \Nwidart\Modules\Laravel\Repository::class,
         'Nwidart\Modules\Contracts\RepositoryInterface' => \Nwidart\Modules\Laravel\Repository::class,
         'image' => \Intervention\Image\ImageManager::class,
-        'Cviebrock\EloquentTaggable\Services\TagService' => \Cviebrock\EloquentTaggable\Services\TagService::class,
         'avatar' => \Laravolt\Avatar\Avatar::class,
         'avatar.generator' => \Laravolt\Avatar\Generator\DefaultGenerator::class,
         'blade.compiler' => \Illuminate\View\Compilers\BladeCompiler::class,
