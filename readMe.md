@@ -13,6 +13,10 @@ DB_DATABASE=<path to sql>/database/database.sqlite
 composer install
 php artisan migrate:install
 
+Command to run seeds:
+php artisan migrate:refresh --seed
+
+
 Command to generate forms:
 
 php artisan make:form Forms/Registration --fields="course_id:number, section_id:number, publish:checkbox"
