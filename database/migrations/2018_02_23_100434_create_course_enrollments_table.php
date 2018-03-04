@@ -25,8 +25,6 @@ class CreateCourseEnrollmentsTable extends Migration
             //rest of fields then...
             $table->foreign('courseRole_id')->references('id')->on('course_roles');
             $table->timestamps();
-            $table->softDeletes();
-
         });
     }
 

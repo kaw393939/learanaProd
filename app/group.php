@@ -10,7 +10,10 @@ class group extends Model
     {
         return $this->belongsTo('App\User');
     }
-
+    public function members()
+    {
+        return $this->belongsToMany('App\groupMember', 'group_members', 'user_id', 'group_id')->withTimestamps();
+    }
     public function groupType()
     {
 

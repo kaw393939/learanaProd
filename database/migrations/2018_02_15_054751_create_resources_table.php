@@ -21,10 +21,9 @@ class CreateResourcesTable extends Migration
             $table->string('title');
             $table->longText('description');
             $table->string('uri')->default('none');
+            $table->time('durration');
             $table->boolean('publish')->default(false);
-            $table->time('length');
             $table->timestamps();
-            $table->softDeletes();
 
         });
     }

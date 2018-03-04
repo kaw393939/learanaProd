@@ -14,6 +14,7 @@ use Faker\Generator as Faker;
 */
 
 $factory->define(\App\Course::class, function (Faker $faker) {
+
     return [
         'title' => $faker->catchPhrase,
         'description' => $faker->paragraph($nbSentences = 3, $variableNbSentences = true),

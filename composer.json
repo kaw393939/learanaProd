@@ -18,6 +18,7 @@
     "require-dev": {
         "filp/whoops": "~2.0",
         "fzaninotto/faker": "^1.7",
+        "aalaap/faker-youtube": "dev-master",
         "mockery/mockery": "~1.0",
         "nunomaduro/collision": "~1.1",
         "phpunit/phpunit": "~7.0",

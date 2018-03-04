@@ -14,9 +14,8 @@ class CreateCourseRolesTable extends Migration
     public function up()
     {
         Schema::create('course_roles', function (Blueprint $table) {
-            $table->integer('id')->increments()->primary();
+            $table->integer('id')->integer()->primary();
             $table->string('type');
-            $table->timestamps();
         });
     }
 
