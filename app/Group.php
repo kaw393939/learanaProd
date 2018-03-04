@@ -12,11 +12,11 @@ class group extends Model
     }
     public function members()
     {
-        return $this->morphToMany(group::class, 'entity', 'members', 'entity_id', 'user_id')->withTimestamps();
+        return $this->morphToMany(User::class, 'entity', 'members', 'entity_id', 'user_id')->withTimestamps();
     }
-    public function groupType()
-    {
 
-        return $this->hasOne('App\groupType', 'user_id', 'id');
+    public function resources()
+    {
+        return $this->morphedByMany(Resource::class, 'entity', 'entity_resources', 'entity_id', 'resource_id')->withTimestamps();
     }
 }

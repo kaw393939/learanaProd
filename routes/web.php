@@ -12,7 +12,10 @@
 */
 
 Auth::routes();
-Route::get('/', 'CourseController@UserCourses')->name('guest');
+Route::get('/', 'CourseController@test')->name('guest');
+
+
+/*
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/course/index', 'CourseController@index')->name('course.index');
@@ -57,6 +60,6 @@ Route::get('/course/{course}/section/{section}/registration/index', 'Registratio
 
 
 Route::get('/user/{user_id}', 'UserController@show')->name('user.show');
-
+*/
 
 

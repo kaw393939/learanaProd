@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Course;
+use App\User;
+use App\Resource;
+
 use Illuminate\Http\Request;
 use Kris\LaravelFormBuilder\FormBuilder;
 use Illuminate\Support\Facades\Auth;
@@ -16,8 +19,18 @@ class CourseController extends Controller
 
     public function __construct()
     {
-        $this->middleware('auth', ['except' => ['index','show']]);
+        $this->middleware('auth', ['except' => ['index', 'show', 'test']]);
     }
+
+    public function test()
+    {
+        $Resource = Resource::find(84);
+
+        dd($Resource->groups()->get());
+
+
+    }
+
 
     public function index()
     {
