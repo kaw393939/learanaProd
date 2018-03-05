@@ -11,7 +11,7 @@ class CourseTableSeeder extends Seeder
      */
     public function run()
     {
-        factory(App\Course::class, 100)->create()->each(function ($course) {
+        factory(App\Course::class, 200)->create()->each(function ($course) {
             $user = App\User::inRandomOrder()->first();
             $course->enrollment()->attach($user, ['role_id' => 1]);
         });

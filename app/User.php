@@ -28,7 +28,7 @@ class User extends Authenticatable
     public function profile()
     {
 
-        return $this->hasOne('App\profile', 'user_id', 'id');
+        return $this->hasOne('App\Profile', 'user_id', 'id');
     }
 
     public function role()
@@ -52,8 +52,8 @@ class User extends Authenticatable
         return $this->morphedByMany(Course::class, 'entity', 'members', 'user_id', 'entity_id')->withTimestamps();
     }
 
-    public function resources()
+    public function content()
     {
-        return $this->morphedByMany(Resource::class, 'entity', 'members', 'user_id', 'entity_id')->withTimestamps();
+        return $this->morphedByMany(Content::class, 'entity', 'members', 'user_id', 'entity_id')->withTimestamps();
     }
 }

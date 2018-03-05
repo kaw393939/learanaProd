@@ -12,8 +12,8 @@
 */
 
 Auth::routes();
-Route::get('/', 'CourseController@test')->name('guest');
-
+//Route::get('/', 'CourseController@test')->name('guest');
+Route::get('/', 'HomeController@index');
 
 /*
 Route::get('/home', 'HomeController@index')->name('home');

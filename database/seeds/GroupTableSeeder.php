@@ -11,7 +11,7 @@ class GroupTableSeeder extends Seeder
      */
     public function run()
     {
-        factory(App\group::class, 100)->create()->each(function ($group) {
+        factory(App\group::class, 500)->create()->each(function ($group) {
             $user = App\User::inRandomOrder()->first();
             $group->members()->attach($user, ['role_id' => 1]);
         });

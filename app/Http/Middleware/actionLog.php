@@ -3,7 +3,7 @@
 namespace App\Http\Middleware;
 
 use Closure;
-use App\action;
+use App\Action;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -26,7 +26,7 @@ class actionLog
 
           $userID = Auth::id();
         }
-        $action = new action();
+        $action = new Action();
         $action->user_id = $userID;
         $action->HTTP_USER_AGENT = $request->server('HTTP_USER_AGENT');
         $action->http_referer = $request->server('HTTP_REFERER');

@@ -3,7 +3,7 @@ namespace PHPSTORM_META {
 
    /**
     * PhpStorm Meta file, to provide autocomplete information for PhpStorm
-    * Generated on 2018-03-04 19:38:48.
+    * Generated on 2018-03-05 16:35:49.
     *
     * @author Barry vd. Heuvel <barryvdh@gmail.com>
     * @see https://github.com/barryvdh/laravel-ide-helper
@@ -49,6 +49,9 @@ namespace PHPSTORM_META {
         'image' => \Intervention\Image\ImageManager::class,
         'avatar' => \Laravolt\Avatar\Avatar::class,
         'avatar.generator' => \Laravolt\Avatar\Generator\DefaultGenerator::class,
+        'pusher.factory' => \Pusher\Laravel\PusherFactory::class,
+        'pusher' => \Pusher\Laravel\PusherManager::class,
+        'pusher.connection' => \Pusher\Pusher::class,
         'blade.compiler' => \Illuminate\View\Compilers\BladeCompiler::class,
         'Illuminate\Console\Scheduling\Schedule' => \Illuminate\Console\Scheduling\Schedule::class,
         'cache' => \Illuminate\Cache\CacheManager::class,
@@ -190,6 +193,9 @@ namespace PHPSTORM_META {
         'image' => \Intervention\Image\ImageManager::class,
         'avatar' => \Laravolt\Avatar\Avatar::class,
         'avatar.generator' => \Laravolt\Avatar\Generator\DefaultGenerator::class,
+        'pusher.factory' => \Pusher\Laravel\PusherFactory::class,
+        'pusher' => \Pusher\Laravel\PusherManager::class,
+        'pusher.connection' => \Pusher\Pusher::class,
         'blade.compiler' => \Illuminate\View\Compilers\BladeCompiler::class,
         'Illuminate\Console\Scheduling\Schedule' => \Illuminate\Console\Scheduling\Schedule::class,
         'cache' => \Illuminate\Cache\CacheManager::class,
@@ -331,6 +337,9 @@ namespace PHPSTORM_META {
         'image' => \Intervention\Image\ImageManager::class,
         'avatar' => \Laravolt\Avatar\Avatar::class,
         'avatar.generator' => \Laravolt\Avatar\Generator\DefaultGenerator::class,
+        'pusher.factory' => \Pusher\Laravel\PusherFactory::class,
+        'pusher' => \Pusher\Laravel\PusherManager::class,
+        'pusher.connection' => \Pusher\Pusher::class,
         'blade.compiler' => \Illuminate\View\Compilers\BladeCompiler::class,
         'Illuminate\Console\Scheduling\Schedule' => \Illuminate\Console\Scheduling\Schedule::class,
         'cache' => \Illuminate\Cache\CacheManager::class,
@@ -472,6 +481,9 @@ namespace PHPSTORM_META {
         'image' => \Intervention\Image\ImageManager::class,
         'avatar' => \Laravolt\Avatar\Avatar::class,
         'avatar.generator' => \Laravolt\Avatar\Generator\DefaultGenerator::class,
+        'pusher.factory' => \Pusher\Laravel\PusherFactory::class,
+        'pusher' => \Pusher\Laravel\PusherManager::class,
+        'pusher.connection' => \Pusher\Pusher::class,
         'blade.compiler' => \Illuminate\View\Compilers\BladeCompiler::class,
         'Illuminate\Console\Scheduling\Schedule' => \Illuminate\Console\Scheduling\Schedule::class,
         'cache' => \Illuminate\Cache\CacheManager::class,
@@ -613,6 +625,9 @@ namespace PHPSTORM_META {
         'image' => \Intervention\Image\ImageManager::class,
         'avatar' => \Laravolt\Avatar\Avatar::class,
         'avatar.generator' => \Laravolt\Avatar\Generator\DefaultGenerator::class,
+        'pusher.factory' => \Pusher\Laravel\PusherFactory::class,
+        'pusher' => \Pusher\Laravel\PusherManager::class,
+        'pusher.connection' => \Pusher\Pusher::class,
         'blade.compiler' => \Illuminate\View\Compilers\BladeCompiler::class,
         'Illuminate\Console\Scheduling\Schedule' => \Illuminate\Console\Scheduling\Schedule::class,
         'cache' => \Illuminate\Cache\CacheManager::class,
@@ -754,6 +769,9 @@ namespace PHPSTORM_META {
         'image' => \Intervention\Image\ImageManager::class,
         'avatar' => \Laravolt\Avatar\Avatar::class,
         'avatar.generator' => \Laravolt\Avatar\Generator\DefaultGenerator::class,
+        'pusher.factory' => \Pusher\Laravel\PusherFactory::class,
+        'pusher' => \Pusher\Laravel\PusherManager::class,
+        'pusher.connection' => \Pusher\Pusher::class,
         'blade.compiler' => \Illuminate\View\Compilers\BladeCompiler::class,
         'Illuminate\Console\Scheduling\Schedule' => \Illuminate\Console\Scheduling\Schedule::class,
         'cache' => \Illuminate\Cache\CacheManager::class,
@@ -895,6 +913,9 @@ namespace PHPSTORM_META {
         'image' => \Intervention\Image\ImageManager::class,
         'avatar' => \Laravolt\Avatar\Avatar::class,
         'avatar.generator' => \Laravolt\Avatar\Generator\DefaultGenerator::class,
+        'pusher.factory' => \Pusher\Laravel\PusherFactory::class,
+        'pusher' => \Pusher\Laravel\PusherManager::class,
+        'pusher.connection' => \Pusher\Pusher::class,
         'blade.compiler' => \Illuminate\View\Compilers\BladeCompiler::class,
         'Illuminate\Console\Scheduling\Schedule' => \Illuminate\Console\Scheduling\Schedule::class,
         'cache' => \Illuminate\Cache\CacheManager::class,

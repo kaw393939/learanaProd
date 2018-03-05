@@ -12,7 +12,7 @@ class ResourceEntityTableSeeder extends Seeder
     public function run()
     {
 
-        for ($x = 0; $x <= 100; $x++) {
+        for ($x = 0; $x <= 500; $x++) {
 
             $course = App\Course::inRandomOrder()->first();
             $group = App\Group::inRandomOrder()->first();

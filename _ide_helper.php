@@ -1,7 +1,7 @@
 <?php
 /**
  * A helper file for Laravel 5, to provide autocomplete information to your IDE
- * Generated for Laravel 5.6.7 on 2018-03-04 19:38:47.
+ * Generated for Laravel 5.6.7 on 2018-03-05 16:35:48.
  *
  * This file should not be included in your code, only analyzed by your IDE!
  *
@@ -2598,8 +2598,8 @@ namespace Illuminate\Support\Facades {
          * @param string $key The key of the item to store.
          * @param mixed $value The value of the item to store, must be serializable.
          * @param null|int|\DateInterval $ttl Optional. The TTL value of this item. If no value is sent and
-         *                                     the driver supports TTL then the library may set a default value
-         *                                     for it or let the driver take care of that.
+         *                                      the driver supports TTL then the library may set a default value
+         *                                      for it or let the driver take care of that.
          * @return bool True on success and false on failure.
          * @throws \Psr\SimpleCache\InvalidArgumentException
          *   MUST be thrown if the $key string is not a legal value.
@@ -2628,8 +2628,8 @@ namespace Illuminate\Support\Facades {
          *
          * @param \Psr\SimpleCache\iterable $values A list of key => value pairs for a multiple-set operation.
          * @param null|int|\DateInterval $ttl Optional. The TTL value of this item. If no value is sent and
-         *                                      the driver supports TTL then the library may set a default value
-         *                                      for it or let the driver take care of that.
+         *                                       the driver supports TTL then the library may set a default value
+         *                                       for it or let the driver take care of that.
          * @return bool True on success and false on failure.
          * @throws \Psr\SimpleCache\InvalidArgumentException
          *   MUST be thrown if $values is neither an array nor a Traversable,
@@ -14265,6 +14265,142 @@ namespace Laravolt\Avatar {
  
 }
 
+namespace Pusher\Laravel\Facades {
+
+    class Pusher
+    {
+
+        /**
+         * Get the factory instance.
+         *
+         * @return \Vinkla\Pusher\PusherFactory
+         * @static
+         */
+        public static function getFactory()
+        {
+            return \Pusher\Laravel\PusherManager::getFactory();
+        }
+
+        /**
+         * Get a connection instance.
+         *
+         * @param string|null $name
+         * @return object
+         * @static
+         */
+        public static function connection($name = null)
+        {
+            //Method inherited from \GrahamCampbell\Manager\AbstractManager            
+            return \Pusher\Laravel\PusherManager::connection($name);
+        }
+
+        /**
+         * Reconnect to the given connection.
+         *
+         * @param string|null $name
+         * @return object
+         * @static
+         */
+        public static function reconnect($name = null)
+        {
+            //Method inherited from \GrahamCampbell\Manager\AbstractManager            
+            return \Pusher\Laravel\PusherManager::reconnect($name);
+        }
+
+        /**
+         * Disconnect from the given connection.
+         *
+         * @param string|null $name
+         * @return void
+         * @static
+         */
+        public static function disconnect($name = null)
+        {
+            //Method inherited from \GrahamCampbell\Manager\AbstractManager            
+            \Pusher\Laravel\PusherManager::disconnect($name);
+        }
+
+        /**
+         * Get the configuration for a connection.
+         *
+         * @param string|null $name
+         * @throws \InvalidArgumentException
+         * @return array
+         * @static
+         */
+        public static function getConnectionConfig($name = null)
+        {
+            //Method inherited from \GrahamCampbell\Manager\AbstractManager            
+            return \Pusher\Laravel\PusherManager::getConnectionConfig($name);
+        }
+
+        /**
+         * Get the default connection name.
+         *
+         * @return string
+         * @static
+         */
+        public static function getDefaultConnection()
+        {
+            //Method inherited from \GrahamCampbell\Manager\AbstractManager            
+            return \Pusher\Laravel\PusherManager::getDefaultConnection();
+        }
+
+        /**
+         * Set the default connection name.
+         *
+         * @param string $name
+         * @return void
+         * @static
+         */
+        public static function setDefaultConnection($name)
+        {
+            //Method inherited from \GrahamCampbell\Manager\AbstractManager            
+            \Pusher\Laravel\PusherManager::setDefaultConnection($name);
+        }
+
+        /**
+         * Register an extension connection resolver.
+         *
+         * @param string $name
+         * @param callable $resolver
+         * @return void
+         * @static
+         */
+        public static function extend($name, $resolver)
+        {
+            //Method inherited from \GrahamCampbell\Manager\AbstractManager            
+            \Pusher\Laravel\PusherManager::extend($name, $resolver);
+        }
+
+        /**
+         * Return all of the created connections.
+         *
+         * @return object[]
+         * @static
+         */
+        public static function getConnections()
+        {
+            //Method inherited from \GrahamCampbell\Manager\AbstractManager            
+            return \Pusher\Laravel\PusherManager::getConnections();
+        }
+
+        /**
+         * Get the config instance.
+         *
+         * @return \Illuminate\Contracts\Config\Repository
+         * @static
+         */
+        public static function getConfig()
+        {
+            //Method inherited from \GrahamCampbell\Manager\AbstractManager            
+            return \Pusher\Laravel\PusherManager::getConfig();
+        }
+
+    }
+
+}
+
 
 namespace  { 
 
@@ -16444,6 +16580,10 @@ namespace  {
     class Image extends \Intervention\Image\Facades\Image {}
 
     class Avatar extends \Laravolt\Avatar\Facade {}
+
+    class Pusher extends \Pusher\Laravel\Facades\Pusher
+    {
+    }
  
 }
 

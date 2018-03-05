@@ -3,7 +3,8 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
-class event extends Model
+
+class Event extends Model
 {
 
     public function owner()
@@ -17,7 +18,7 @@ class event extends Model
 
     public function content()
     {
-        return $this->morphedByMany(content::class, 'entity', 'entity_resources', 'entity_id', 'resource_id')->withTimestamps();
+        return $this->morphedByMany(Content::class, 'entity', 'entity_resources', 'entity_id', 'resource_id')->withTimestamps();
     }
 
     public function groups()
