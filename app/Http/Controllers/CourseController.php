@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Course;
 use App\User;
-use App\Resource;
+use App\Content;
 
 use Illuminate\Http\Request;
 use Kris\LaravelFormBuilder\FormBuilder;
@@ -24,9 +24,9 @@ class CourseController extends Controller
 
     public function test()
     {
-        $Resource = Resource::find(84);
+        $Content = User::find(94);
 
-        dd($Resource->groups()->get());
+        dd($Content->groups()->get());
 
 
     }

@@ -17,12 +17,13 @@ class DatabaseSeeder extends Seeder
             CourseTypesTableSeeder::class,
             EventTypesTableSeeder::class,
             GroupTypesTableSeeder::class,
-            ResourceTypesTableSeeder::class,
+            ContentTypesTableSeeder::class,
             UserTableSeeder::class,
             CourseTableSeeder::class,
             GroupTableSeeder::class,
             EventTableSeeder::class,
-            ResourceTableSeeder::class,
+            ContentTableSeeder::class,
+            ResourceEntityTableSeeder::class,
 
 
 

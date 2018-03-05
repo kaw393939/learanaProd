@@ -15,8 +15,13 @@ class event extends Model
         return $this->morphToMany(User::class, 'entity', 'members', 'entity_id', 'user_id')->withTimestamps();
     }
 
-    public function resources()
+    public function content()
     {
-        return $this->morphedByMany(Resource::class, 'entity', 'entity_resources', 'entity_id', 'resource_id')->withTimestamps();
+        return $this->morphedByMany(content::class, 'entity', 'entity_resources', 'entity_id', 'resource_id')->withTimestamps();
+    }
+
+    public function groups()
+    {
+        return $this->morphedByMany(Group::class, 'entity', 'entity_resources', 'entity_id', 'resource_id')->withTimestamps();
     }
 }
