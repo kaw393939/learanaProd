@@ -11,7 +11,7 @@ class EventTableSeeder extends Seeder
      */
     public function run()
     {
-        factory(App\Event::class, 1000)->create()->each(function ($event) {
+        factory(App\Event::class, 10)->create()->each(function ($event) {
             $user = App\User::inRandomOrder()->first();
             $event->attendees()->attach($user, ['role_id' => 1]);
         });

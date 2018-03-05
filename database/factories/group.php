@@ -2,7 +2,7 @@
 
 use Faker\Generator as Faker;
 
-$factory->define(\App\group::class, function (Faker $faker) {
+$factory->define(\App\Group::class, function (Faker $faker) {
     return [
         //
         'title' => $faker->catchPhrase,

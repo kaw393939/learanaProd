@@ -13,7 +13,7 @@ class UserTableSeeder extends Seeder
     public function run()
     {
 
-        factory(App\User::class, 1000)->create()->each(function ($user) {
+        factory(App\User::class, 10)->create()->each(function ($user) {
             $user->profile()->save(factory(App\Profile::class)->make());
         });
     }
