@@ -3,12 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\User;
-use App\Course;
-use App\Section;
-
 use Illuminate\Http\Request;
-use Kris\LaravelFormBuilder\FormBuilder;
-use Illuminate\Support\Facades\Auth;
 
 class UserController extends Controller
 {
@@ -19,15 +14,7 @@ class UserController extends Controller
      */
     public function index()
     {
-        $records = User::all()->toArray();
-
-        $pageTitle = 'Users';
-        $records = data2Table($records);
-
-
-        return view('user.index')->with(compact('records','pageTitle'));
-
-
+        //
     }
 
     /**
@@ -46,38 +33,29 @@ class UserController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request, User $user)
+    public function store(Request $request)
     {
-
+        //
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\User $user
      * @return \Illuminate\Http\Response
      */
-    public function show($user)
+    public function show(User $user)
     {
-        //$courses = $user->courses();
-
-        $user = User::find($user);
-
-
-        $courses = $user->courses()->get();
-
-        $sections = $user->sections()->get();
-        $pageTitle = 'User Profile';
-        return view('user.full')->with(compact('user', 'courses', 'sections','pageTitle'));
+        //
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\User $user
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(User $user)
     {
         //
     }
@@ -86,10 +64,10 @@ class UserController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  \App\User $user
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, User $user)
     {
         //
     }
@@ -97,10 +75,10 @@ class UserController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  \App\User $user
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(User $user)
     {
         //
     }

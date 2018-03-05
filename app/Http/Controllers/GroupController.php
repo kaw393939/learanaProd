@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\group;
+use App\Group;
 use Illuminate\Http\Request;
 
 class GroupController extends Controller
@@ -41,10 +41,10 @@ class GroupController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\group  $group
+     * @param  \App\Group $group
      * @return \Illuminate\Http\Response
      */
-    public function show(group $group)
+    public function show(Group $group)
     {
         //
     }
@@ -52,10 +52,10 @@ class GroupController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\group  $group
+     * @param  \App\Group $group
      * @return \Illuminate\Http\Response
      */
-    public function edit(group $group)
+    public function edit(Group $group)
     {
         //
     }
@@ -64,10 +64,10 @@ class GroupController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\group  $group
+     * @param  \App\Group $group
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, group $group)
+    public function update(Request $request, Group $group)
     {
         //
     }
@@ -75,10 +75,10 @@ class GroupController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\group  $group
+     * @param  \App\Group $group
      * @return \Illuminate\Http\Response
      */
-    public function destroy(group $group)
+    public function destroy(Group $group)
     {
         //
     }

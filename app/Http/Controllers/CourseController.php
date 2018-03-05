@@ -3,12 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Course;
-use App\User;
-use App\Content;
-
 use Illuminate\Http\Request;
-use Kris\LaravelFormBuilder\FormBuilder;
-use Illuminate\Support\Facades\Auth;
+
 class CourseController extends Controller
 {
     /**
@@ -16,47 +12,9 @@ class CourseController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-
-    public function __construct()
-    {
-        $this->middleware('auth', ['except' => ['index', 'show', 'test']]);
-    }
-
-    public function test()
-    {
-        $Content = User::find(94);
-
-        dd($Content->groups()->get());
-
-
-    }
-
-
     public function index()
     {
         //
-        $records = Course::all()->toArray();
-
-        $pageTitle = 'Courses';
-
-        $records = data2Table($records);
-
-        return view('courses.index')->with(compact('records','pageTitle'));
-    }
-
-    public function UserCourses($userID = NULL)
-    {
-        //
-        if ($userID == NULL) {
-            $userID = Auth::user()->id;
-        }
-        $records = Course::where('user_id', $userID)->get()->toArray();
-
-        $pageTitle = 'My Courses';
-
-        $records = data2Table($records);
-
-        return view('courses.index')->with(compact('records', 'pageTitle'));
     }
 
     /**
@@ -64,35 +22,20 @@ class CourseController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create(FormBuilder $formBuilder)
+    public function create()
     {
-        $form = $formBuilder->create(\App\Forms\CourseForm::class, [
-            'method' => 'POST',
-            'url' => route('course.store')
-        ]);
-        $pageTitle = 'Create Course';
-
-        return view('courses.form', compact('form','pageTitle'));
+        //
     }
 
-    public function store(FormBuilder $formBuilder, Request $request)
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request $request
+     * @return \Illuminate\Http\Response
+     */
+    public function store(Request $request)
     {
-        $form = $formBuilder->create(\App\Forms\CourseForm::class);
-
-        if (!$form->isValid()) {
-            return redirect()->back()->withErrors($form->getErrors())->withInput();
-        }
-
-        // Do saving and other things...
-        $course = new Course();
-        $course->user_id = Auth::id();
-        $course->title = $request->title;
-        $course->description = $request->description;
-        $course->publish = $request->has('publish');
-        $course->save();
-        return redirect()->route('home');
-
-
+        //
     }
 
     /**
@@ -103,11 +46,7 @@ class CourseController extends Controller
      */
     public function show(Course $course)
     {
-        $resources = $course->resources()->get();
-        $sections = $course->sections()->get();
-
-        $pageTitle = 'Course';
-        return view('courses.full')->with(compact('course', 'resources', 'sections','pageTitle'));
+        //
     }
 
     /**
@@ -116,22 +55,9 @@ class CourseController extends Controller
      * @param  \App\Course  $course
      * @return \Illuminate\Http\Response
      */
-    public function edit(FormBuilder $formBuilder, Course $course)
+    public function edit(Course $course)
     {
         //
-        $edit = $formBuilder->create(\App\Forms\CourseForm::class, [
-            'method' => 'PATCH',
-            'url' => route('course.update', $course->id),
-            'model' => $course,
-        ]);
-        //
-        $delete = $formBuilder->create(\App\Forms\DeleteForm::class, [
-            'method' => 'DELETE',
-            'url' => route('course.destroy', $course->id),
-        ]);
-        $pageTitle = 'Edit Course';
-        return view('courses.formEdit', compact('edit','delete', 'pageTitle'));
-
     }
 
     /**
@@ -141,22 +67,9 @@ class CourseController extends Controller
      * @param  \App\Course  $course
      * @return \Illuminate\Http\Response
      */
-    public function update(FormBuilder $formBuilder, Request $request, Course $course)
+    public function update(Request $request, Course $course)
     {
         //
-        $form = $formBuilder->create(\App\Forms\CourseForm::class);
-
-        if (!$form->isValid()) {
-            return redirect()->back()->withErrors($form->getErrors())->withInput();
-        }
-
-        // Do saving and other things...
-        $course->title = $request->title;
-        $course->description = $request->description;
-        $course->publish = $request->has('publish');
-        $course->save();
-
-        return redirect()->route('course.show',['course' => $course->id ]);
     }
 
     /**
@@ -165,14 +78,8 @@ class CourseController extends Controller
      * @param  \App\Course  $course
      * @return \Illuminate\Http\Response
      */
-    public function destroy(FormBuilder $formBuilder, Course $course, Request $request)
+    public function destroy(Course $course)
     {
-        // delete
-
-        $course->delete();
-
-        // redirect
-        $request->session()->flash('message', 'Successfully deleted the nerd!');
-        return redirect()->route('course.index');
+        //
     }
 }

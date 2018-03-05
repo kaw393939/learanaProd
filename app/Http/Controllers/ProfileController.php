@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\profile;
+use App\Profile;
 use Illuminate\Http\Request;
 
 class ProfileController extends Controller
@@ -41,10 +41,10 @@ class ProfileController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\profile  $profile
+     * @param  \App\Profile $profile
      * @return \Illuminate\Http\Response
      */
-    public function show(profile $profile)
+    public function show(Profile $profile)
     {
         //
     }
@@ -52,10 +52,10 @@ class ProfileController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\profile  $profile
+     * @param  \App\Profile $profile
      * @return \Illuminate\Http\Response
      */
-    public function edit(profile $profile)
+    public function edit(Profile $profile)
     {
         //
     }
@@ -64,10 +64,10 @@ class ProfileController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\profile  $profile
+     * @param  \App\Profile $profile
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, profile $profile)
+    public function update(Request $request, Profile $profile)
     {
         //
     }
@@ -75,10 +75,10 @@ class ProfileController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\profile  $profile
+     * @param  \App\Profile $profile
      * @return \Illuminate\Http\Response
      */
-    public function destroy(profile $profile)
+    public function destroy(Profile $profile)
     {
         //
     }
