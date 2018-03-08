@@ -1,7 +1,7 @@
 <?php
 /**
  * A helper file for Laravel 5, to provide autocomplete information to your IDE
- * Generated for Laravel 5.6.7 on 2018-03-05 16:35:48.
+ * Generated for Laravel 5.6.7 on 2018-03-05 19:43:08.
  *
  * This file should not be included in your code, only analyzed by your IDE!
  *
@@ -13488,6 +13488,224 @@ namespace Collective\Html {
  
 }
 
+namespace Intervention\Image\Facades { 
+
+    class Image {
+        
+        /**
+         * Overrides configuration settings
+         *
+         * @param array $config
+         * @static 
+         */ 
+        public static function configure($config = array())
+        {
+            return \Intervention\Image\ImageManager::configure($config);
+        }
+        
+        /**
+         * Initiates an Image instance from different input types
+         *
+         * @param mixed $data
+         * @return \Intervention\Image\Image 
+         * @static 
+         */ 
+        public static function make($data)
+        {
+            return \Intervention\Image\ImageManager::make($data);
+        }
+        
+        /**
+         * Creates an empty image canvas
+         *
+         * @param integer $width
+         * @param integer $height
+         * @param mixed $background
+         * @return \Intervention\Image\Image 
+         * @static 
+         */ 
+        public static function canvas($width, $height, $background = null)
+        {
+            return \Intervention\Image\ImageManager::canvas($width, $height, $background);
+        }
+        
+        /**
+         * Create new cached image and run callback
+         * (requires additional package intervention/imagecache)
+         *
+         * @param \Closure $callback
+         * @param integer $lifetime
+         * @param boolean $returnObj
+         * @return \Image 
+         * @static 
+         */ 
+        public static function cache($callback, $lifetime = null, $returnObj = false)
+        {
+            return \Intervention\Image\ImageManager::cache($callback, $lifetime, $returnObj);
+        }
+         
+    }
+ 
+}
+
+namespace Laravolt\Avatar { 
+
+    class Facade {
+        
+        /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function setGenerator($generator)
+        {
+            return \Laravolt\Avatar\Avatar::setGenerator($generator);
+        }
+        
+        /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function create($name)
+        {
+            return \Laravolt\Avatar\Avatar::create($name);
+        }
+        
+        /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function setFont($font)
+        {
+            return \Laravolt\Avatar\Avatar::setFont($font);
+        }
+        
+        /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function toBase64()
+        {
+            return \Laravolt\Avatar\Avatar::toBase64();
+        }
+        
+        /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function save($path, $quality = 90)
+        {
+            return \Laravolt\Avatar\Avatar::save($path, $quality);
+        }
+        
+        /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function toSvg()
+        {
+            return \Laravolt\Avatar\Avatar::toSvg();
+        }
+        
+        /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function setBackground($hex)
+        {
+            return \Laravolt\Avatar\Avatar::setBackground($hex);
+        }
+        
+        /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function setForeground($hex)
+        {
+            return \Laravolt\Avatar\Avatar::setForeground($hex);
+        }
+        
+        /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function setDimension($width, $height = null)
+        {
+            return \Laravolt\Avatar\Avatar::setDimension($width, $height);
+        }
+        
+        /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function setFontSize($size)
+        {
+            return \Laravolt\Avatar\Avatar::setFontSize($size);
+        }
+        
+        /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function setBorder($size, $color)
+        {
+            return \Laravolt\Avatar\Avatar::setBorder($size, $color);
+        }
+        
+        /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function setShape($shape)
+        {
+            return \Laravolt\Avatar\Avatar::setShape($shape);
+        }
+        
+        /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function getInitial()
+        {
+            return \Laravolt\Avatar\Avatar::getInitial();
+        }
+        
+        /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function getImageObject()
+        {
+            return \Laravolt\Avatar\Avatar::getImageObject();
+        }
+        
+        /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function buildAvatar()
+        {
+            return \Laravolt\Avatar\Avatar::buildAvatar();
+        }
+         
+    }
+ 
+}
+
 namespace Nwidart\Modules\Facades { 
 
     class Module {
@@ -14047,358 +14265,139 @@ namespace Nwidart\Modules\Facades {
  
 }
 
-namespace Intervention\Image\Facades { 
+namespace Pusher\Laravel\Facades { 
 
-    class Image {
+    class Pusher {
         
-        /**
-         * Overrides configuration settings
-         *
-         * @param array $config
-         * @static 
-         */ 
-        public static function configure($config = array())
-        {
-            return \Intervention\Image\ImageManager::configure($config);
-        }
-        
-        /**
-         * Initiates an Image instance from different input types
-         *
-         * @param mixed $data
-         * @return \Intervention\Image\Image 
-         * @static 
-         */ 
-        public static function make($data)
-        {
-            return \Intervention\Image\ImageManager::make($data);
-        }
-        
-        /**
-         * Creates an empty image canvas
-         *
-         * @param integer $width
-         * @param integer $height
-         * @param mixed $background
-         * @return \Intervention\Image\Image 
-         * @static 
-         */ 
-        public static function canvas($width, $height, $background = null)
-        {
-            return \Intervention\Image\ImageManager::canvas($width, $height, $background);
-        }
-        
-        /**
-         * Create new cached image and run callback
-         * (requires additional package intervention/imagecache)
-         *
-         * @param \Closure $callback
-         * @param integer $lifetime
-         * @param boolean $returnObj
-         * @return \Image 
-         * @static 
-         */ 
-        public static function cache($callback, $lifetime = null, $returnObj = false)
-        {
-            return \Intervention\Image\ImageManager::cache($callback, $lifetime, $returnObj);
-        }
-         
-    }
- 
-}
-
-namespace Laravolt\Avatar { 
-
-    class Facade {
-        
-        /**
-         * 
-         *
-         * @static 
-         */ 
-        public static function setGenerator($generator)
-        {
-            return \Laravolt\Avatar\Avatar::setGenerator($generator);
-        }
-        
-        /**
-         * 
-         *
-         * @static 
-         */ 
-        public static function create($name)
-        {
-            return \Laravolt\Avatar\Avatar::create($name);
-        }
-        
-        /**
-         * 
-         *
-         * @static 
-         */ 
-        public static function setFont($font)
-        {
-            return \Laravolt\Avatar\Avatar::setFont($font);
-        }
-        
-        /**
-         * 
-         *
-         * @static 
-         */ 
-        public static function toBase64()
-        {
-            return \Laravolt\Avatar\Avatar::toBase64();
-        }
-        
-        /**
-         * 
-         *
-         * @static 
-         */ 
-        public static function save($path, $quality = 90)
-        {
-            return \Laravolt\Avatar\Avatar::save($path, $quality);
-        }
-        
-        /**
-         * 
-         *
-         * @static 
-         */ 
-        public static function toSvg()
-        {
-            return \Laravolt\Avatar\Avatar::toSvg();
-        }
-        
-        /**
-         * 
-         *
-         * @static 
-         */ 
-        public static function setBackground($hex)
-        {
-            return \Laravolt\Avatar\Avatar::setBackground($hex);
-        }
-        
-        /**
-         * 
-         *
-         * @static 
-         */ 
-        public static function setForeground($hex)
-        {
-            return \Laravolt\Avatar\Avatar::setForeground($hex);
-        }
-        
-        /**
-         * 
-         *
-         * @static 
-         */ 
-        public static function setDimension($width, $height = null)
-        {
-            return \Laravolt\Avatar\Avatar::setDimension($width, $height);
-        }
-        
-        /**
-         * 
-         *
-         * @static 
-         */ 
-        public static function setFontSize($size)
-        {
-            return \Laravolt\Avatar\Avatar::setFontSize($size);
-        }
-        
-        /**
-         * 
-         *
-         * @static 
-         */ 
-        public static function setBorder($size, $color)
-        {
-            return \Laravolt\Avatar\Avatar::setBorder($size, $color);
-        }
-        
-        /**
-         * 
-         *
-         * @static 
-         */ 
-        public static function setShape($shape)
-        {
-            return \Laravolt\Avatar\Avatar::setShape($shape);
-        }
-        
-        /**
-         * 
-         *
-         * @static 
-         */ 
-        public static function getInitial()
-        {
-            return \Laravolt\Avatar\Avatar::getInitial();
-        }
-        
-        /**
-         * 
-         *
-         * @static 
-         */ 
-        public static function getImageObject()
-        {
-            return \Laravolt\Avatar\Avatar::getImageObject();
-        }
-        
-        /**
-         * 
-         *
-         * @static 
-         */ 
-        public static function buildAvatar()
-        {
-            return \Laravolt\Avatar\Avatar::buildAvatar();
-        }
-         
-    }
- 
-}
-
-namespace Pusher\Laravel\Facades {
-
-    class Pusher
-    {
-
         /**
          * Get the factory instance.
          *
-         * @return \Vinkla\Pusher\PusherFactory
-         * @static
-         */
+         * @return \Vinkla\Pusher\PusherFactory 
+         * @static 
+         */ 
         public static function getFactory()
         {
             return \Pusher\Laravel\PusherManager::getFactory();
         }
-
+        
         /**
          * Get a connection instance.
          *
          * @param string|null $name
-         * @return object
-         * @static
-         */
+         * @return object 
+         * @static 
+         */ 
         public static function connection($name = null)
         {
             //Method inherited from \GrahamCampbell\Manager\AbstractManager            
             return \Pusher\Laravel\PusherManager::connection($name);
         }
-
+        
         /**
          * Reconnect to the given connection.
          *
          * @param string|null $name
-         * @return object
-         * @static
-         */
+         * @return object 
+         * @static 
+         */ 
         public static function reconnect($name = null)
         {
             //Method inherited from \GrahamCampbell\Manager\AbstractManager            
             return \Pusher\Laravel\PusherManager::reconnect($name);
         }
-
+        
         /**
          * Disconnect from the given connection.
          *
          * @param string|null $name
-         * @return void
-         * @static
-         */
+         * @return void 
+         * @static 
+         */ 
         public static function disconnect($name = null)
         {
             //Method inherited from \GrahamCampbell\Manager\AbstractManager            
             \Pusher\Laravel\PusherManager::disconnect($name);
         }
-
+        
         /**
          * Get the configuration for a connection.
          *
          * @param string|null $name
          * @throws \InvalidArgumentException
-         * @return array
-         * @static
-         */
+         * @return array 
+         * @static 
+         */ 
         public static function getConnectionConfig($name = null)
         {
             //Method inherited from \GrahamCampbell\Manager\AbstractManager            
             return \Pusher\Laravel\PusherManager::getConnectionConfig($name);
         }
-
+        
         /**
          * Get the default connection name.
          *
-         * @return string
-         * @static
-         */
+         * @return string 
+         * @static 
+         */ 
         public static function getDefaultConnection()
         {
             //Method inherited from \GrahamCampbell\Manager\AbstractManager            
             return \Pusher\Laravel\PusherManager::getDefaultConnection();
         }
-
+        
         /**
          * Set the default connection name.
          *
          * @param string $name
-         * @return void
-         * @static
-         */
+         * @return void 
+         * @static 
+         */ 
         public static function setDefaultConnection($name)
         {
             //Method inherited from \GrahamCampbell\Manager\AbstractManager            
             \Pusher\Laravel\PusherManager::setDefaultConnection($name);
         }
-
+        
         /**
          * Register an extension connection resolver.
          *
          * @param string $name
          * @param callable $resolver
-         * @return void
-         * @static
-         */
+         * @return void 
+         * @static 
+         */ 
         public static function extend($name, $resolver)
         {
             //Method inherited from \GrahamCampbell\Manager\AbstractManager            
             \Pusher\Laravel\PusherManager::extend($name, $resolver);
         }
-
+        
         /**
          * Return all of the created connections.
          *
-         * @return object[]
-         * @static
-         */
+         * @return object[] 
+         * @static 
+         */ 
         public static function getConnections()
         {
             //Method inherited from \GrahamCampbell\Manager\AbstractManager            
             return \Pusher\Laravel\PusherManager::getConnections();
         }
-
+        
         /**
          * Get the config instance.
          *
-         * @return \Illuminate\Contracts\Config\Repository
-         * @static
-         */
+         * @return \Illuminate\Contracts\Config\Repository 
+         * @static 
+         */ 
         public static function getConfig()
         {
             //Method inherited from \GrahamCampbell\Manager\AbstractManager            
             return \Pusher\Laravel\PusherManager::getConfig();
         }
-
+         
     }
-
+ 
 }
 
 
@@ -16575,15 +16574,13 @@ namespace  {
 
     class Html extends \Collective\Html\HtmlFacade {}
 
-    class Module extends \Nwidart\Modules\Facades\Module {}
-
     class Image extends \Intervention\Image\Facades\Image {}
 
     class Avatar extends \Laravolt\Avatar\Facade {}
 
-    class Pusher extends \Pusher\Laravel\Facades\Pusher
-    {
-    }
+    class Module extends \Nwidart\Modules\Facades\Module {}
+
+    class Pusher extends \Pusher\Laravel\Facades\Pusher {}
  
 }
 
