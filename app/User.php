@@ -37,6 +37,10 @@ class User extends Authenticatable
         return $this->hasOne('App\systemRole', 'user_id', 'id');
     }
 
+    public function addGroup($group)
+    {
+        return $this->morphedByMany(Group::class, 'entity', 'members', 'user_id', 'entity_id')->withTimestamps();
+    }
     public function groups()
     {
         return $this->morphedByMany(Group::class, 'entity', 'members', 'user_id', 'entity_id')->withTimestamps();

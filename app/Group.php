@@ -6,9 +6,16 @@ use Illuminate\Database\Eloquent\Model;
 
 class Group extends Model
 {
+
     public function members()
     {
         return $this->morphToMany(User::class, 'entity', 'members', 'entity_id', 'user_id')->withTimestamps();
+    }
+
+    public function addOwner($user, $roleID = 1)
+    {
+
+        return $this->members()->attach($user, ['role_id' => $roleID]);
     }
 
     public function content()

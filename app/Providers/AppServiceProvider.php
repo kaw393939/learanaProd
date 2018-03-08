@@ -2,10 +2,13 @@
 
 namespace App\Providers;
 
-use App\Profile;
 use Illuminate\Support\ServiceProvider;
-use App\User;
+use App\Profile;
 use App\Observers\ProfileObserver;
+use App\User;
+use App\Observers\UserObserver;
+
+
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -18,6 +21,7 @@ class AppServiceProvider extends ServiceProvider
     {
         //
         Profile::observe(ProfileObserver::class);
+        User::observe(UserObserver::class);
 
     }
 
