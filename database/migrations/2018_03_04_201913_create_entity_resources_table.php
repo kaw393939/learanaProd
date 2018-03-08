@@ -17,7 +17,6 @@ class CreateEntityResourcesTable extends Migration
             $table->increments('id');
             $table->unsignedInteger('entity_id')->index();
             $table->unsignedInteger('resource_id');
-            $table->foreign('resource_id')->references('id')->on('resources')->onUpdate('cascade')->onDelete('cascade');
             $table->string('entity_type');
             $table->timestamps();
         });

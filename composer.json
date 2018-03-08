@@ -14,6 +14,7 @@
         "laravel/tinker": "~1.0",
         "laravolt/avatar": "^2.0",
         "nwidart/laravel-modules": "^3.0",
+      "predis/predis": "^1.1",
         "vinkla/pusher": "^4.1"
     },
     "require-dev": {

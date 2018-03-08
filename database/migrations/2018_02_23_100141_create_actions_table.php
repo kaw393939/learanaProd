@@ -16,7 +16,6 @@ class CreateActionsTable extends Migration
         Schema::create('actions', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('user_id')->unsigned();
-            $table->foreign('user_id')->references('id')->on('users');
             $table->string('HTTP_REFERER')->nullable();
             $table->string('REQUEST_URI')->nullable();
             $table->string('HTTP_USER_AGENT')->nullable();

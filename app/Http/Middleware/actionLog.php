@@ -29,8 +29,8 @@ class actionLog
         $action = new Action();
         $action->user_id = $userID;
         $action->HTTP_USER_AGENT = $request->server('HTTP_USER_AGENT');
-        $action->http_referer = $request->server('HTTP_REFERER');
-        $action->request_uri = $request->server('REQUEST_URI');
+        $action->HTTP_REFERER = $request->server('HTTP_REFERER');
+        $action->REQUEST_URI = $request->server('REQUEST_URI');
         $action->save();
         return $next($request);
     }

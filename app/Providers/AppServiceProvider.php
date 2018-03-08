@@ -2,7 +2,10 @@
 
 namespace App\Providers;
 
+use App\Profile;
 use Illuminate\Support\ServiceProvider;
+use App\User;
+use App\Observers\ProfileObserver;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -14,6 +17,8 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         //
+        Profile::observe(ProfileObserver::class);
+
     }
 
     /**
