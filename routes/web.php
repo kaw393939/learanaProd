@@ -63,3 +63,6 @@ Route::get('/user/{user_id}', 'UserController@show')->name('user.show');
 */
 
 
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

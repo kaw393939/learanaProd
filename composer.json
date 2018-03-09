@@ -18,12 +18,12 @@
         "vinkla/pusher": "^4.1"
     },
     "require-dev": {
+      "aalaap/faker-youtube": "dev-master",
         "filp/whoops": "~2.0",
         "fzaninotto/faker": "^1.7",
-        "aalaap/faker-youtube": "dev-master",
         "mockery/mockery": "~1.0",
         "nunomaduro/collision": "~1.1",
-        "phpunit/phpunit": "~7.0",
+      "phpunit/phpunit": "^7",
         "symfony/thanks": "^1.0"
     },
     "autoload": {
