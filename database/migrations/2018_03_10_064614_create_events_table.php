@@ -19,7 +19,7 @@ class CreateEventsTable extends Migration
             $table->longText('description')->nullable();
             $table->integer('eventType_id')->unsigned();
             //rest of fields then...
-            //  $table->foreign('eventType_id')->references('id')->on('event_types');
+            $table->foreign('eventType_id')->references('id')->on('event_types');
             $table->dateTimeTz('registrationOpen')->nullable($value = true);
             $table->dateTimeTz('registrationClose')->nullable($value = true);
             $table->boolean('publish')->default(false);
