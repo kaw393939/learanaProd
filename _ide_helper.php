@@ -1,11 +1,7 @@
 <?php
 /**
  * A helper file for Laravel 5, to provide autocomplete information to your IDE
-<<<<<<< HEAD
- * Generated for Laravel 5.6.7 on 2018-03-07 05:13:19.
-=======
- * Generated for Laravel 5.6.7 on 2018-03-05 19:43:08.
->>>>>>> kevinUnitTest
+ * Generated for Laravel 5.6.11 on 2018-03-10 08:31:32.
  *
  * This file should not be included in your code, only analyzed by your IDE!
  *
@@ -3263,98 +3259,6 @@ namespace Illuminate\Support\Facades {
         public static function getQueuedCookies()
         {
             return \Illuminate\Cookie\CookieJar::getQueuedCookies();
-        }
-         
-    }
-
-    class Crypt {
-        
-        /**
-         * Determine if the given key and cipher combination is valid.
-         *
-         * @param string $key
-         * @param string $cipher
-         * @return bool 
-         * @static 
-         */ 
-        public static function supported($key, $cipher)
-        {
-            return \Illuminate\Encryption\Encrypter::supported($key, $cipher);
-        }
-        
-        /**
-         * Create a new encryption key for the given cipher.
-         *
-         * @param string $cipher
-         * @return string 
-         * @static 
-         */ 
-        public static function generateKey($cipher)
-        {
-            return \Illuminate\Encryption\Encrypter::generateKey($cipher);
-        }
-        
-        /**
-         * Encrypt the given value.
-         *
-         * @param mixed $value
-         * @param bool $serialize
-         * @return string 
-         * @throws \Illuminate\Contracts\Encryption\EncryptException
-         * @static 
-         */ 
-        public static function encrypt($value, $serialize = true)
-        {
-            return \Illuminate\Encryption\Encrypter::encrypt($value, $serialize);
-        }
-        
-        /**
-         * Encrypt a string without serialization.
-         *
-         * @param string $value
-         * @return string 
-         * @static 
-         */ 
-        public static function encryptString($value)
-        {
-            return \Illuminate\Encryption\Encrypter::encryptString($value);
-        }
-        
-        /**
-         * Decrypt the given value.
-         *
-         * @param mixed $payload
-         * @param bool $unserialize
-         * @return string 
-         * @throws \Illuminate\Contracts\Encryption\DecryptException
-         * @static 
-         */ 
-        public static function decrypt($payload, $unserialize = true)
-        {
-            return \Illuminate\Encryption\Encrypter::decrypt($payload, $unserialize);
-        }
-        
-        /**
-         * Decrypt the given string without unserialization.
-         *
-         * @param string $payload
-         * @return string 
-         * @static 
-         */ 
-        public static function decryptString($payload)
-        {
-            return \Illuminate\Encryption\Encrypter::decryptString($payload);
-        }
-        
-        /**
-         * Get the encryption key.
-         *
-         * @return string 
-         * @static 
-         */ 
-        public static function getKey()
-        {
-            return \Illuminate\Encryption\Encrypter::getKey();
         }
          
     }
@@ -6776,45 +6680,44 @@ namespace Illuminate\Support\Facades {
          
     }
 
-    class Redis
-    {
-
+    class Redis {
+        
         /**
          * Get a Redis connection by name.
          *
          * @param string|null $name
-         * @return \Illuminate\Redis\Connections\Connection
-         * @static
-         */
+         * @return \Illuminate\Redis\Connections\Connection 
+         * @static 
+         */ 
         public static function connection($name = null)
         {
             return \Illuminate\Redis\RedisManager::connection($name);
         }
-
+        
         /**
          * Resolve the given connection by name.
          *
          * @param string|null $name
-         * @return \Illuminate\Redis\Connections\Connection
+         * @return \Illuminate\Redis\Connections\Connection 
          * @throws \InvalidArgumentException
-         * @static
-         */
+         * @static 
+         */ 
         public static function resolve($name = null)
         {
             return \Illuminate\Redis\RedisManager::resolve($name);
         }
-
+        
         /**
          * Return all of the created connections.
          *
-         * @return array
-         * @static
-         */
+         * @return array 
+         * @static 
+         */ 
         public static function connections()
         {
             return \Illuminate\Redis\RedisManager::connections();
         }
-
+         
     }
 
     class Request {
@@ -9760,14 +9663,14 @@ namespace Illuminate\Support\Facades {
     }
 
     class Schema {
-
+        
         /**
          * Determine if the given table exists.
          *
          * @param string $table
-         * @return bool
-         * @static
-         */
+         * @return bool 
+         * @static 
+         */ 
         public static function hasTable($table)
         {
             return \Illuminate\Database\Schema\PostgresBuilder::hasTable($table);
@@ -9789,8 +9692,8 @@ namespace Illuminate\Support\Facades {
          *
          * @param string $table
          * @return array 
-         * @static
-         */
+         * @static 
+         */ 
         public static function getColumnListing($table)
         {
             return \Illuminate\Database\Schema\PostgresBuilder::getColumnListing($table);
@@ -13520,6 +13423,141 @@ namespace Collective\Html {
  
 }
 
+namespace Pusher\Laravel\Facades { 
+
+    class Pusher {
+        
+        /**
+         * Get the factory instance.
+         *
+         * @return \Vinkla\Pusher\PusherFactory 
+         * @static 
+         */ 
+        public static function getFactory()
+        {
+            return \Pusher\Laravel\PusherManager::getFactory();
+        }
+        
+        /**
+         * Get a connection instance.
+         *
+         * @param string|null $name
+         * @return object 
+         * @static 
+         */ 
+        public static function connection($name = null)
+        {
+            //Method inherited from \GrahamCampbell\Manager\AbstractManager            
+            return \Pusher\Laravel\PusherManager::connection($name);
+        }
+        
+        /**
+         * Reconnect to the given connection.
+         *
+         * @param string|null $name
+         * @return object 
+         * @static 
+         */ 
+        public static function reconnect($name = null)
+        {
+            //Method inherited from \GrahamCampbell\Manager\AbstractManager            
+            return \Pusher\Laravel\PusherManager::reconnect($name);
+        }
+        
+        /**
+         * Disconnect from the given connection.
+         *
+         * @param string|null $name
+         * @return void 
+         * @static 
+         */ 
+        public static function disconnect($name = null)
+        {
+            //Method inherited from \GrahamCampbell\Manager\AbstractManager            
+            \Pusher\Laravel\PusherManager::disconnect($name);
+        }
+        
+        /**
+         * Get the configuration for a connection.
+         *
+         * @param string|null $name
+         * @throws \InvalidArgumentException
+         * @return array 
+         * @static 
+         */ 
+        public static function getConnectionConfig($name = null)
+        {
+            //Method inherited from \GrahamCampbell\Manager\AbstractManager            
+            return \Pusher\Laravel\PusherManager::getConnectionConfig($name);
+        }
+        
+        /**
+         * Get the default connection name.
+         *
+         * @return string 
+         * @static 
+         */ 
+        public static function getDefaultConnection()
+        {
+            //Method inherited from \GrahamCampbell\Manager\AbstractManager            
+            return \Pusher\Laravel\PusherManager::getDefaultConnection();
+        }
+        
+        /**
+         * Set the default connection name.
+         *
+         * @param string $name
+         * @return void 
+         * @static 
+         */ 
+        public static function setDefaultConnection($name)
+        {
+            //Method inherited from \GrahamCampbell\Manager\AbstractManager            
+            \Pusher\Laravel\PusherManager::setDefaultConnection($name);
+        }
+        
+        /**
+         * Register an extension connection resolver.
+         *
+         * @param string $name
+         * @param callable $resolver
+         * @return void 
+         * @static 
+         */ 
+        public static function extend($name, $resolver)
+        {
+            //Method inherited from \GrahamCampbell\Manager\AbstractManager            
+            \Pusher\Laravel\PusherManager::extend($name, $resolver);
+        }
+        
+        /**
+         * Return all of the created connections.
+         *
+         * @return object[] 
+         * @static 
+         */ 
+        public static function getConnections()
+        {
+            //Method inherited from \GrahamCampbell\Manager\AbstractManager            
+            return \Pusher\Laravel\PusherManager::getConnections();
+        }
+        
+        /**
+         * Get the config instance.
+         *
+         * @return \Illuminate\Contracts\Config\Repository 
+         * @static 
+         */ 
+        public static function getConfig()
+        {
+            //Method inherited from \GrahamCampbell\Manager\AbstractManager            
+            return \Pusher\Laravel\PusherManager::getConfig();
+        }
+         
+    }
+ 
+}
+
 namespace Intervention\Image\Facades { 
 
     class Image {
@@ -14297,209 +14335,6 @@ namespace Nwidart\Modules\Facades {
  
 }
 
-namespace Pusher\Laravel\Facades { 
-
-    class Pusher {
-        
-        /**
-         * Get the factory instance.
-         *
-         * @return \Vinkla\Pusher\PusherFactory 
-         * @static 
-         */ 
-<<<<<<< HEAD
-        public static function buildAvatar()
-        {
-            return \Laravolt\Avatar\Avatar::buildAvatar();
-        }
-         
-    }
- 
-}
-
-namespace Pusher\Laravel\Facades {
-
-    class Pusher
-    {
-
-        /**
-         * Get the factory instance.
-         *
-         * @return \Vinkla\Pusher\PusherFactory
-         * @static
-         */ 
-=======
->>>>>>> kevinUnitTest
-        public static function getFactory()
-        {
-            return \Pusher\Laravel\PusherManager::getFactory();
-        }
-        
-        /**
-         * Get a connection instance.
-         *
-         * @param string|null $name
-<<<<<<< HEAD
-         * @return object
-         * @static
-=======
-         * @return object 
-         * @static 
->>>>>>> kevinUnitTest
-         */ 
-        public static function connection($name = null)
-        {
-            //Method inherited from \GrahamCampbell\Manager\AbstractManager            
-            return \Pusher\Laravel\PusherManager::connection($name);
-        }
-        
-        /**
-         * Reconnect to the given connection.
-         *
-         * @param string|null $name
-<<<<<<< HEAD
-         * @return object
-         * @static
-=======
-         * @return object 
-         * @static 
->>>>>>> kevinUnitTest
-         */ 
-        public static function reconnect($name = null)
-        {
-            //Method inherited from \GrahamCampbell\Manager\AbstractManager            
-            return \Pusher\Laravel\PusherManager::reconnect($name);
-        }
-        
-        /**
-         * Disconnect from the given connection.
-         *
-         * @param string|null $name
-<<<<<<< HEAD
-         * @return void
-         * @static
-=======
-         * @return void 
-         * @static 
->>>>>>> kevinUnitTest
-         */ 
-        public static function disconnect($name = null)
-        {
-            //Method inherited from \GrahamCampbell\Manager\AbstractManager            
-            \Pusher\Laravel\PusherManager::disconnect($name);
-        }
-        
-        /**
-         * Get the configuration for a connection.
-         *
-         * @param string|null $name
-         * @throws \InvalidArgumentException
-<<<<<<< HEAD
-         * @return array
-         * @static
-=======
-         * @return array 
-         * @static 
->>>>>>> kevinUnitTest
-         */ 
-        public static function getConnectionConfig($name = null)
-        {
-            //Method inherited from \GrahamCampbell\Manager\AbstractManager            
-            return \Pusher\Laravel\PusherManager::getConnectionConfig($name);
-        }
-        
-        /**
-         * Get the default connection name.
-         *
-<<<<<<< HEAD
-         * @return string
-         * @static
-=======
-         * @return string 
-         * @static 
->>>>>>> kevinUnitTest
-         */ 
-        public static function getDefaultConnection()
-        {
-            //Method inherited from \GrahamCampbell\Manager\AbstractManager            
-            return \Pusher\Laravel\PusherManager::getDefaultConnection();
-        }
-        
-        /**
-         * Set the default connection name.
-         *
-         * @param string $name
-<<<<<<< HEAD
-         * @return void
-         * @static
-=======
-         * @return void 
-         * @static 
->>>>>>> kevinUnitTest
-         */ 
-        public static function setDefaultConnection($name)
-        {
-            //Method inherited from \GrahamCampbell\Manager\AbstractManager            
-            \Pusher\Laravel\PusherManager::setDefaultConnection($name);
-        }
-        
-        /**
-         * Register an extension connection resolver.
-         *
-         * @param string $name
-         * @param callable $resolver
-<<<<<<< HEAD
-         * @return void
-         * @static
-=======
-         * @return void 
-         * @static 
->>>>>>> kevinUnitTest
-         */ 
-        public static function extend($name, $resolver)
-        {
-            //Method inherited from \GrahamCampbell\Manager\AbstractManager            
-            \Pusher\Laravel\PusherManager::extend($name, $resolver);
-        }
-        
-        /**
-         * Return all of the created connections.
-         *
-<<<<<<< HEAD
-         * @return object[]
-         * @static
-=======
-         * @return object[] 
-         * @static 
->>>>>>> kevinUnitTest
-         */ 
-        public static function getConnections()
-        {
-            //Method inherited from \GrahamCampbell\Manager\AbstractManager            
-            return \Pusher\Laravel\PusherManager::getConnections();
-        }
-        
-        /**
-         * Get the config instance.
-         *
-<<<<<<< HEAD
-         * @return \Illuminate\Contracts\Config\Repository
-         * @static
-=======
-         * @return \Illuminate\Contracts\Config\Repository 
-         * @static 
->>>>>>> kevinUnitTest
-         */ 
-        public static function getConfig()
-        {
-            //Method inherited from \GrahamCampbell\Manager\AbstractManager            
-            return \Pusher\Laravel\PusherManager::getConfig();
-        }
-         
-    }
- 
-}
-
 
 namespace  { 
 
@@ -14520,8 +14355,6 @@ namespace  {
     class Config extends \Illuminate\Support\Facades\Config {}
 
     class Cookie extends \Illuminate\Support\Facades\Cookie {}
-
-    class Crypt extends \Illuminate\Support\Facades\Crypt {}
 
     class DB extends \Illuminate\Support\Facades\DB {}
 
@@ -15790,6 +15623,20 @@ namespace  {
             }
          
             /**
+             * Add an "or where day" statement to the query.
+             *
+             * @param string $column
+             * @param string $operator
+             * @param mixed $value
+             * @return \Illuminate\Database\Query\Builder|static 
+             * @static 
+             */ 
+            public static function orWhereDay($column, $operator, $value = null)
+            {    
+                return \Illuminate\Database\Query\Builder::orWhereDay($column, $operator, $value);
+            }
+         
+            /**
              * Add a "where month" statement to the query.
              *
              * @param string $column
@@ -15805,6 +15652,20 @@ namespace  {
             }
          
             /**
+             * Add an "or where month" statement to the query.
+             *
+             * @param string $column
+             * @param string $operator
+             * @param mixed $value
+             * @return \Illuminate\Database\Query\Builder|static 
+             * @static 
+             */ 
+            public static function orWhereMonth($column, $operator, $value = null)
+            {    
+                return \Illuminate\Database\Query\Builder::orWhereMonth($column, $operator, $value);
+            }
+         
+            /**
              * Add a "where year" statement to the query.
              *
              * @param string $column
@@ -15817,6 +15678,20 @@ namespace  {
             public static function whereYear($column, $operator, $value = null, $boolean = 'and')
             {    
                 return \Illuminate\Database\Query\Builder::whereYear($column, $operator, $value, $boolean);
+            }
+         
+            /**
+             * Add an "or where year" statement to the query.
+             *
+             * @param string $column
+             * @param string $operator
+             * @param mixed $value
+             * @return \Illuminate\Database\Query\Builder|static 
+             * @static 
+             */ 
+            public static function orWhereYear($column, $operator, $value = null)
+            {    
+                return \Illuminate\Database\Query\Builder::orWhereYear($column, $operator, $value);
             }
          
             /**
@@ -16650,9 +16525,7 @@ namespace  {
 
     class Redirect extends \Illuminate\Support\Facades\Redirect {}
 
-    class Redis extends \Illuminate\Support\Facades\Redis
-    {
-    }
+    class Redis extends \Illuminate\Support\Facades\Redis {}
 
     class Request extends \Illuminate\Support\Facades\Request {}
 
@@ -16678,13 +16551,13 @@ namespace  {
 
     class Html extends \Collective\Html\HtmlFacade {}
 
+    class Pusher extends \Pusher\Laravel\Facades\Pusher {}
+
     class Image extends \Intervention\Image\Facades\Image {}
 
     class Avatar extends \Laravolt\Avatar\Facade {}
 
     class Module extends \Nwidart\Modules\Facades\Module {}
-
-    class Pusher extends \Pusher\Laravel\Facades\Pusher {}
  
 }
 
